@@ -4,7 +4,6 @@ import axios from 'axios';
 import { showAlert } from './alerts';
 
 export const updateSettings = async (data, type) => {
-  console.log(data);
   try {
     const url =
       type === 'password'
@@ -25,7 +24,7 @@ export const updateSettings = async (data, type) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -43,7 +42,7 @@ export const deleteAccount = async () => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };

@@ -50,7 +50,7 @@ exports.signup = catchAsync(async (req, res, next) => {
       message: 'Token sent by email.',
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return next(
       new AppError(
         'There was an error sending the email. Please try again later.',

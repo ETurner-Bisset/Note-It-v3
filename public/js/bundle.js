@@ -6015,16 +6015,16 @@ function () {
             }, 1500);
           }
 
-          _context.next = 11;
+          _context.next = 10;
           break;
 
         case 7:
           _context.prev = 7;
           _context.t0 = _context["catch"](0);
-          console.log(_context.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context.stop();
       }
@@ -6063,16 +6063,16 @@ function () {
             }, 1500);
           }
 
-          _context2.next = 11;
+          _context2.next = 10;
           break;
 
         case 7:
           _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0.response);
+          // console.log(err.response);
           (0, _alerts.showAlert)('error', 'Error logging out! Try again.');
 
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
@@ -6130,26 +6130,25 @@ function () {
 
         case 3:
           res = _context.sent;
-          console.log(res);
 
           if (res.data.status === 'success') {
             location.assign('/activateAccount');
           }
 
-          _context.next = 12;
+          _context.next = 10;
           break;
 
-        case 8:
-          _context.prev = 8;
+        case 7:
+          _context.prev = 7;
           _context.t0 = _context["catch"](0);
-          console.log(_context.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-        case 12:
+        case 10:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[0, 8]]);
+    }, _callee, null, [[0, 7]]);
   }));
 
   return function signup(_x, _x2, _x3, _x4) {
@@ -6208,16 +6207,16 @@ function () {
             }, 1500);
           }
 
-          _context.next = 11;
+          _context.next = 10;
           break;
 
         case 7:
           _context.prev = 7;
           _context.t0 = _context["catch"](0);
-          console.log(_context.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context.stop();
       }
@@ -6257,16 +6256,16 @@ function () {
             location.assign('/resetSuccess');
           }
 
-          _context2.next = 11;
+          _context2.next = 10;
           break;
 
         case 7:
           _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context2.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
@@ -6592,16 +6591,16 @@ function () {
             }, 1500);
           }
 
-          _context.next = 11;
+          _context.next = 10;
           break;
 
         case 7:
           _context.prev = 7;
           _context.t0 = _context["catch"](0);
-          console.log(_context.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context.stop();
       }
@@ -6643,16 +6642,16 @@ function () {
             }, 1500);
           }
 
-          _context2.next = 11;
+          _context2.next = 10;
           break;
 
         case 7:
           _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context2.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
@@ -6694,16 +6693,16 @@ function () {
             }, 1500);
           }
 
-          _context3.next = 11;
+          _context3.next = 10;
           break;
 
         case 7:
           _context3.prev = 7;
           _context3.t0 = _context3["catch"](0);
-          console.log(_context3.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context3.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context3.stop();
       }
@@ -6745,16 +6744,16 @@ function () {
             }, 1500);
           }
 
-          _context4.next = 11;
+          _context4.next = 10;
           break;
 
         case 7:
           _context4.prev = 7;
           _context4.t0 = _context4["catch"](0);
-          console.log(_context4.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context4.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context4.stop();
       }
@@ -6796,16 +6795,16 @@ function () {
             }, 1500);
           }
 
-          _context5.next = 11;
+          _context5.next = 10;
           break;
 
         case 7:
           _context5.prev = 7;
           _context5.t0 = _context5["catch"](0);
-          console.log(_context5.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context5.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context5.stop();
       }
@@ -6847,16 +6846,16 @@ function () {
             }, 1500);
           }
 
-          _context6.next = 11;
+          _context6.next = 10;
           break;
 
         case 7:
           _context6.prev = 7;
           _context6.t0 = _context6["catch"](0);
-          console.log(_context6.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context6.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context6.stop();
       }
@@ -6895,16 +6894,16 @@ function () {
             }, 1500);
           }
 
-          _context7.next = 11;
+          _context7.next = 10;
           break;
 
         case 7:
           _context7.prev = 7;
           _context7.t0 = _context7["catch"](0);
-          console.log(_context7.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context7.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context7.stop();
       }
@@ -6946,16 +6945,16 @@ function () {
             }, 1500);
           }
 
-          _context8.next = 11;
+          _context8.next = 10;
           break;
 
         case 7:
           _context8.prev = 7;
           _context8.t0 = _context8["catch"](0);
-          console.log(_context8.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context8.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context8.stop();
       }
@@ -6994,16 +6993,16 @@ function () {
             }, 1500);
           }
 
-          _context9.next = 11;
+          _context9.next = 10;
           break;
 
         case 7:
           _context9.prev = 7;
           _context9.t0 = _context9["catch"](0);
-          console.log(_context9.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context9.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context9.stop();
       }
@@ -7092,17 +7091,16 @@ function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          console.log(data);
-          _context.prev = 1;
+          _context.prev = 0;
           url = type === 'password' ? 'http://127.0.0.1:8080/api/v1/users/updateMyPassword' : 'http://127.0.0.1:8080/api/v1/users/updateMe';
-          _context.next = 5;
+          _context.next = 4;
           return (0, _axios.default)({
             method: 'PATCH',
             url: url,
             data: data
           });
 
-        case 5:
+        case 4:
           res = _context.sent;
 
           if (res.data.status === 'success') {
@@ -7112,20 +7110,20 @@ function () {
             }, 1500);
           }
 
-          _context.next = 13;
+          _context.next = 11;
           break;
 
-        case 9:
-          _context.prev = 9;
-          _context.t0 = _context["catch"](1);
-          console.log(_context.t0);
+        case 8:
+          _context.prev = 8;
+          _context.t0 = _context["catch"](0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-        case 13:
+        case 11:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[1, 9]]);
+    }, _callee, null, [[0, 8]]);
   }));
 
   return function updateSettings(_x, _x2) {
@@ -7160,16 +7158,16 @@ function () {
             }, 1500);
           }
 
-          _context2.next = 11;
+          _context2.next = 10;
           break;
 
         case 7:
           _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0);
+          // console.log(error);
           (0, _alerts.showAlert)('error', _context2.t0.response.data.message);
 
-        case 11:
+        case 10:
         case "end":
           return _context2.stop();
       }
@@ -7239,7 +7237,7 @@ var sendContactEmail = exports.sendContactEmail = function sendContactEmail(json
       };
     }());
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     (0, _alerts.showAlert)('error', 'There was an error send the email. Please try again later.');
   }
 };

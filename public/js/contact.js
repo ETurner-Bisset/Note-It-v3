@@ -18,7 +18,7 @@ export const sendContactEmail = (json) => {
       }, 1500);
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert(
       'error',
       'There was an error send the email. Please try again later.',

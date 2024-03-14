@@ -17,7 +17,7 @@ export const forgotUserPassword = async (email) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -36,7 +36,7 @@ export const resetUserPassword = async (password, passwordConfirm, token) => {
       location.assign('/resetSuccess');
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };

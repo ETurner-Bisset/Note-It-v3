@@ -28,7 +28,7 @@ exports.getHome = catchAsync(async (req, res, next) => {
       today,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 });
 
@@ -42,7 +42,7 @@ exports.getAlphaNotes = catchAsync(async (req, res, next) => {
       notes,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 });
 
@@ -53,7 +53,7 @@ exports.signupForm = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -64,7 +64,7 @@ exports.loginForm = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -75,7 +75,7 @@ exports.forgotPassword = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -86,7 +86,7 @@ exports.checkInbox = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -112,7 +112,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(400).render('errorPage', {
       title: 'Something went wrong',
       date,
@@ -132,7 +132,7 @@ exports.resetPasswordSuccess = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -143,7 +143,7 @@ exports.activateAccount = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -161,7 +161,7 @@ exports.signupConfirm = catchAsync(async (req, res, next) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 });
 
@@ -172,7 +172,7 @@ exports.addNote = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -197,7 +197,7 @@ exports.getExampleNote = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -208,7 +208,7 @@ exports.getAccount = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -220,7 +220,7 @@ exports.contactPage = (req, res, next) => {
       accessKey: process.env.W3F_ACCESS_KEY,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -231,7 +231,7 @@ exports.sentEmailPage = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -242,6 +242,6 @@ exports.getErrorPage = (req, res, next) => {
       date,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };

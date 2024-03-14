@@ -3,7 +3,6 @@ import axios from 'axios';
 import { showAlert } from './alerts';
 
 export const login = async (email, password) => {
-  // console.log('here');
   try {
     const res = await axios({
       method: 'POST',
@@ -20,7 +19,7 @@ export const login = async (email, password) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -38,7 +37,7 @@ export const logout = async () => {
       }, 1500);
     }
   } catch (err) {
-    console.log(err.response);
+    // console.log(err.response);
     showAlert('error', 'Error logging out! Try again.');
   }
 };

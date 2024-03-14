@@ -15,7 +15,7 @@ export const deleteNote = async (noteId) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -36,7 +36,7 @@ export const addItem = async (noteId, item) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -57,7 +57,7 @@ export const editNote = async (noteId, newInput) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -78,7 +78,7 @@ export const addToDoneList = async (noteId, item) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -99,7 +99,7 @@ export const undoDoneItem = async (noteId, item) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -120,7 +120,7 @@ export const editItem = async (noteId, itemId, updatedItem) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -138,7 +138,7 @@ export const deleteItem = async (noteId, itemId) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -159,7 +159,7 @@ export const clearDoneList = async (noteId, emArr) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
@@ -177,7 +177,7 @@ export const deleteList = async (noteId) => {
       }, 1500);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };
