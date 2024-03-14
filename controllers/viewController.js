@@ -217,6 +217,7 @@ exports.contactPage = (req, res, next) => {
     res.status(200).render('contactPage', {
       title: 'Contact Us',
       date,
+      accessKey: process.env.W3F_ACCESS_KEY,
     });
   } catch (error) {
     console.log(error);
