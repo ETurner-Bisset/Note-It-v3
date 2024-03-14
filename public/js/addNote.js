@@ -7,7 +7,7 @@ export const addNote = async (title, noteText, itemsArr) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://127.0.0.1:8080/api/v1/notes',
+      url: '/api/v1/notes',
       data: {
         title,
         noteText,

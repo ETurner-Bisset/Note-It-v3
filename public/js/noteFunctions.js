@@ -6,7 +6,7 @@ export const deleteNote = async (noteId) => {
   try {
     const res = await axios({
       method: 'DELETE',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}`,
+      url: `/api/v1/notes/${noteId}`,
     });
     if (res.status === 204) {
       showAlert('success', 'Note deleted');
@@ -24,7 +24,7 @@ export const addItem = async (noteId, item) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/addItem`,
+      url: `/api/v1/notes/${noteId}/addItem`,
       data: {
         item,
       },
@@ -45,7 +45,7 @@ export const editNote = async (noteId, newInput) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}`,
+      url: `/api/v1/notes/${noteId}`,
       data: {
         newInput,
       },
@@ -66,7 +66,7 @@ export const addToDoneList = async (noteId, item) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/doneList`,
+      url: `/api/v1/notes/${noteId}/doneList`,
       data: {
         item,
       },
@@ -87,7 +87,7 @@ export const undoDoneItem = async (noteId, item) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/undo`,
+      url: `/api/v1/notes/${noteId}/undo`,
       data: {
         item,
       },
@@ -108,7 +108,7 @@ export const editItem = async (noteId, itemId, updatedItem) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/items/${itemId}`,
+      url: `/api/v1/notes/${noteId}/items/${itemId}`,
       data: {
         updatedItem,
       },
@@ -129,7 +129,7 @@ export const deleteItem = async (noteId, itemId) => {
   try {
     const res = await axios({
       method: 'DELETE',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/items/${itemId}`,
+      url: `/api/v1/notes/${noteId}/items/${itemId}`,
     });
     if (res.data.status === 'success') {
       showAlert('success', 'An item has been deleted.');
@@ -147,7 +147,7 @@ export const clearDoneList = async (noteId, emArr) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/clearDone`,
+      url: `/api/v1/notes/${noteId}/clearDone`,
       data: {
         emArr,
       },
@@ -168,7 +168,7 @@ export const deleteList = async (noteId) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8080/api/v1/notes/${noteId}/deleteList`,
+      url: `/api/v1/notes/${noteId}/deleteList`,
     });
     if (res.data.status === 'success') {
       showAlert('success', 'List deleted');

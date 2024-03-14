@@ -7,8 +7,8 @@ export const updateSettings = async (data, type) => {
   try {
     const url =
       type === 'password'
-        ? 'http://127.0.0.1:8080/api/v1/users/updateMyPassword'
-        : 'http://127.0.0.1:8080/api/v1/users/updateMe';
+        ? '/api/v1/users/updateMyPassword'
+        : '/api/v1/users/updateMe';
     const res = await axios({
       method: 'PATCH',
       url,
@@ -33,7 +33,7 @@ export const deleteAccount = async () => {
   try {
     const res = await axios({
       method: 'DELETE',
-      url: 'http://127.0.0.1:8080/api/v1/users/deleteMe',
+      url: '/api/v1/users/deleteMe',
     });
     if (res.status === 204) {
       showAlert('success', 'Your account has been deleted.');

@@ -17,7 +17,7 @@ export const searchNotes = async (searchTitle) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://127.0.0.1:8080/api/v1/notes/searchNotes',
+      url: '/api/v1/notes/searchNotes',
       data: {
         title: searchTitle,
       },
