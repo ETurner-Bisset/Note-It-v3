@@ -4,7 +4,7 @@ import { showAlert } from './alerts';
 
 export const showNote = async (noteId) => {
   try {
-    const res = await axios(`http://127.0.0.1:8080/api/v1/notes/${noteId}`);
+    const res = await axios(`/api/v1/notes/${noteId}`);
     if (res.data.status === 'success') {
       location.assign(`/${noteId}`);
     }
