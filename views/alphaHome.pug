@@ -1,0 +1,39 @@
+extends base    
+
+block content 
+    main.main
+        if user 
+            .container
+                h1.title-welcome= `Welcome ${user.name.split(' ')[0]}` 
+                h3.date #{today}
+                p.display-text Currently sorted alphabetically.
+                p.display-text Sort:
+                    .display
+                        a.btn.date(href='/') Date Created
+                a.btn.add-btn(href='/addNote') Add Note
+                    i.fa-solid.fa-plus
+                form#search-form 
+                    .form-group#search-form-group     
+                        label.form-label(for='search-title') Search:
+                        #search-input 
+                            input.form-input#search-title(type='text' placeholder='Enter note title...')
+                            button.btn.btn-search(title='Search notes') 
+                                i.fa-solid.fa-magnifying-glass
+                - const noNotes = notes.length === 0 ? true : false
+                if noNotes
+                    .notes-container-example 
+                        a.btn#btn-exmaple(href='/exampleNote') Example Note
+                    
+                else 
+                    .notes-container 
+                        each note in notes 
+                            a.btn.show-note(id=`${note.id}` )= note.title
+        
+        else
+            .container
+                h1.main-title Note It 
+                    i.fa-solid.fa-pen-nib
+                p.main-text One app for keeping all your notes and lists.
+                .home-btn-container 
+                    a.btn(href='/signup' ) Sign Up 
+                    a.btn(href='/login' ) Login

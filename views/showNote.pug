@@ -1,0 +1,118 @@
+extends base   
+
+mixin listItem(note, item)
+    li.list-item(id=`${item.id}` draggable='true')= item.item
+        .edit-delete-btns(id=`${note.id}`)
+            button.btn-edit.edit-item
+                i.fa-solid.fa-pencil(id=`${item.id}` title='Edit Item')
+            .item-tick-container
+                input.form-input#edititemInput(type='text' value=`${item.item}` hidden)
+                button.btn-edit.item-tick(hidden )
+                    i.fa-solid.fa-check(id=`${item.id}` title='Done')
+            button.btn-delete#delete-item 
+                i.fa-solid.fa-trash(id=`${item.id}` title='Delete Item')
+
+mixin doneItem(note, done)
+    li.done-item(id=`${done.id}`)= done.item 
+        button.btn-undo(id=`${note.id}`) 
+            i.fa-solid.fa-rotate-left(id=`${done.id}` title='Undo')
+
+mixin itemInput(num)
+    .form-group.form-item 
+        label.form-label(for=`item${num}`)= `${num}.`
+        input.form-input.item(id=`item${num}` type='text' name='item')
+        button.btn.voice-btn(id=`item${num}` title='Microphone') 
+            i.fa-solid.fa-microphone
+
+block content 
+    main.main 
+        .container.show-container 
+            form(id=`${note.id}`).form-title  
+                .form-group 
+                    h4.show-title#title-text= note.title
+                        button.btn-edit#edit-title
+                            i.fa-solid.fa-pencil(title='Edit Title')
+                    .tick-container
+                        input.form-input.show-input#editTitleInput(type='text' value=`${note.title}` required hidden)
+                        button.btn-edit.title-tick( hidden)
+                            i.fa-solid.fa-check(id=`${note.id}` title='Done')
+                    
+                .group-container
+                    -if (note.noteText !== '')
+                        .form-group.note-group 
+                            h5 Note 
+                            hr.small-underline
+                            .note-container
+                                .note-text-p= note.noteText
+                                .edit-delete-btns
+                                    button.btn-edit#edit-text
+                                        i.fa-solid.fa-pencil(title='Edit Note')
+                                    .text-tick-container
+                                        textarea.form-input#editNoteInput(cols="30" rows="5" hidden)= note.noteText
+                                        button.btn-edit.text-tick(id=`${note.id}` hidden)
+                                            i.fa-solid.fa-check(id=`${note.id}` title='Done')
+                                    button.btn-delete#delete-text 
+                                        i.fa-solid.fa-trash(id=`${note.id}` title='Delete Note' )
+                    -else
+                        .form-group 
+                            button.btn.btn-add-text Add note text
+                        
+                    -if (note.itemsArr.length !== 0) 
+                        .form-group.list-group
+                            h5= `List (${note.itemsArr.length})` 
+                            hr.small-underline 
+                            ol#parent-list 
+                                each item in note.itemsArr
+                                    +listItem(note, item)
+                            .form-group
+                                .add-item 
+                                    input.form-input#add-item(type='text' name='item' placeholder='Add new item...')
+                                    button.btn-add-item(id=`${note.id}` ) 
+                                        i.fa-solid.fa-plus(id=`${note.id}` title='Add Item')
+                            .form-group
+                                button.btn.btn-delete-list(id=`${note.id}`) Delete List
+                    -else 
+                        .form-group 
+                            button.btn.btn-add-list Add List
+                -if (note.doneList.length !== 0) 
+                    .form-group.done-group 
+                        h5= `Done (${note.doneList.length})` 
+                        hr.small-underline
+                        ul 
+                            each done in note.doneList 
+                                +doneItem(note, done)
+                        .form-group 
+                            button.btn.btn-clear(id=`${note.id}`) Clear Done List
+                .form-group 
+                    button.btn.btn-delete-note(id=`${note.id}`) Delete Note
+            
+                
+            .modal#text-modal
+                .modal-content 
+                    span.close &times;
+                    form#add-text   
+                        .form-group 
+                            label.form-label(for='noteText') Note Text:
+                            .mic-container
+                                textarea(cols="30" rows="5")#note-text.form-input
+                                button.btn.voice-btn#text-btn(title='Microphone') 
+                                    i.fa-solid.fa-microphone
+                        .form-group 
+                            button.btn.add-text(id=`${note.id}`) Add text
+                                i.fa-solid.fa-plus
+
+            .modal#list-modal 
+                .modal-content 
+                    span.close-list &times;
+                    form#add-list
+                        .items-container
+                            h4 List: 
+                            +itemInput(1)    
+                            +itemInput(2)    
+                            +itemInput(3)    
+                            +itemInput(4)    
+                            +itemInput(5)    
+                        .form-group
+                            button.btn.btn-add-list(id=`${note.id}`) Add list
+                                i.fa-solid.fa-plus
+

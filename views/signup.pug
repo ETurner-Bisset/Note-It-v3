@@ -1,0 +1,25 @@
+extends base    
+
+block content 
+    main.main.signup 
+        .container
+            h1.title Sign up for Note It
+            form#signup-form
+                .form-group  
+                    label.form-label(for='name') Name 
+                    input#name.form-input(type='text' placeholder='Please enter your name...' required autocomplete)
+                .form-group 
+                    label.form-label(for='email-signup') Email 
+                    input#email-signup.form-input(type='email' placeholder='Please enter your email...' required aria-describedby='emailHelp' autocomplete)
+                    .form-text#emailHelp We'll never share your email with anyone else.
+                .form-group 
+                    label.form-label(for='password-signup') Password 
+                    .password 
+                        input#password-signup.form-input(type='password' placeholder='* * * * * * * *' required minlength='8')
+                        i#togglePassword.fa-regular.fa-eye-slash
+                    p Password must be at least 8 characters in length.
+                .form-group 
+                    label.form-label(for='passwordConfirm') Confirm Password 
+                    input#passwordConfirm.form-input(type='password' required minlength='8')
+                .form-group 
+                    button.btn.btn-signup Sign Up

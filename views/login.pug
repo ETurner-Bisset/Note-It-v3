@@ -1,0 +1,18 @@
+extends base    
+
+block content 
+    main.main.login 
+        h1.title Log in to Note It 
+        form#login-form
+            .form-group 
+                label.form-label(for='email-login') Email 
+                input#email-login.form-input(type='email' name='email' placeholder='Please enter your email...' required autocomplete )
+            .form-group 
+                label.form-label(for='password-login') Password 
+                .password
+                    input#password-login.form-input(type='password' placeholder='* * * * * * * *' required minlength='8' )
+                    i#togglePasswordLogin.fa-regular.fa-eye-slash
+            .form-group 
+                a#forgot-password(href='/forgotPassword') Forgot Password
+            .form-group
+                button.btn.btn-login Log In

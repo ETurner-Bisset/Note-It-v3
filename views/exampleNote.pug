@@ -1,0 +1,71 @@
+extends base  
+
+mixin listItem(text)
+    li.list-item= text 
+        .edit-delete-btns
+            button.btn-edit.edit-item
+                i.fa-solid.fa-pencil(title='Edit Item')
+            .item-tick-container
+                input.form-input#edititemInput(type='text' value=`${text}` hidden)
+                button.btn-edit.item-tick(hidden )
+                    i.fa-solid.fa-check(title='Done')
+            button.btn-delete#delete-item 
+                i.fa-solid.fa-trash(title='Delete Item')
+
+mixin doneItem(text)
+    li.done-item= text
+        button.btn-undo 
+            i.fa-solid.fa-rotate-left(title='Undo')
+
+block content 
+    main.main
+        .container.show-container 
+            form.form-title  
+                .form-group 
+                    h4.show-title#title-text Example Note Title
+                        button.btn-edit#edit-title
+                            i.fa-solid.fa-pencil(title='Edit Title')
+                    .tick-container
+                            input.form-input#editTitleInput(type='text' value='Example Note Title' required hidden)
+                            button.btn-edit.title-tick(hidden)
+                                i.fa-solid.fa-check(title='Done')
+                .group-container 
+                    .form-group.note-group 
+                        h5 Note 
+                        hr.small-underline
+                        .note-container 
+                            .note-text-p Your note text goes here.
+                            .edit-delete-btns
+                                button.btn-edit#edit-text
+                                    i.fa-solid.fa-pencil(title='Edit Note')
+                                .text-tick-container
+                                    textarea.form-input#editNoteInput(cols="30" rows="5" hidden) Your note text goes here.
+                                    button.btn-edit.text-tick(hidden)
+                                        i.fa-solid.fa-check(title='Done')
+                                button.btn-delete#delete-text 
+                                    i.fa-solid.fa-trash(title='Delete Note')
+                    .form-group.list-group
+                        h5 List 
+                        hr.small-underline 
+                        ul
+                            +listItem('Item 1')
+                            +listItem('Item 2')
+                            +listItem('Item 3')
+                            +listItem('Item 4')
+                            +listItem('Item 5')
+                        .form-group
+                            .add-item 
+                                input.form-input#add-item(type='text' name='item' placeholder='Add new item...')
+                                button.btn-add-item 
+                                    i.fa-solid.fa-plus(title='Add Item')
+                .form-group.done-group 
+                        h5 Done 
+                        hr.small-underline
+                        ul  
+                            +doneItem('Item 6')
+                            +doneItem('Item 7')
+                            +doneItem('Item 8')
+                        .form-group 
+                            button.btn.btn-clear Clear Done Items
+                .form-group 
+                    button.btn.btn-delete-note Delete Note

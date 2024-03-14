@@ -1,0 +1,38 @@
+extends base 
+
+mixin itemInput(num)
+    .form-group.form-item 
+        label.form-label(for=`item${num}`)= `${num}.`
+        input.form-input.item(id=`item${num}` type='text' name='item')
+        button.btn.voice-btn(id=`item${num}` title='Microphone') 
+            i.fa-solid.fa-microphone
+
+block content 
+    main.main.add-main 
+        h1.title.add-title Add Note 
+        form#add-note   
+            .form-group 
+                label.form-label(for='title') Note Title 
+                .mic-container
+                    input#title.form-input(type='text' )
+                    button.btn.voice-btn#title-btn(title='Microphone')
+                        i.fa-solid.fa-microphone
+            .form-group 
+                label.form-label(for='note-text') Note Text
+                .mic-container
+                    textarea(cols="30" rows="5")#note-text.form-input
+                    button.btn.voice-btn#text-btn(title='Microphone') 
+                        i.fa-solid.fa-microphone
+            .items-container
+                h4 List
+                +itemInput(1)
+                +itemInput(2)
+                +itemInput(3)
+                +itemInput(4)
+                +itemInput(5)
+            .form-group 
+                button.btn.btn-add-more#more-items More items
+                    i.fa-solid.fa-plus
+            .form-group 
+                button.btn.btn-save Create note 
+                    i.fa-solid.fa-plus

@@ -1,0 +1,22 @@
+extends base   
+
+block content 
+    main.main 
+        .container 
+            h1.title Contact Form 
+            p.text Got any questions, comments or feedback. Submit the form below and we will get back to you as soon as we can.
+            form#contact-form(action='https://api.web3forms.com/submit'
+  method='POST')  
+                input.access_key(type='hidden' name='access_key' value=`${accessKey}`)
+                input.subject(type='hidden' name='subject' value='Note It Contact Form')
+                .form-group 
+                    label.form-label(for='contact-name') Name 
+                    input.form-input#contact-name(type='text' required)
+                .form-group 
+                    label.form-label(for='contact-email') Email 
+                    input.form-input#contact-email(type='email' required)
+                .form-group 
+                    label.form-label(for='message') Your Message 
+                    textarea#message.form-input(name="message", cols="30", rows="10" required) 
+                .form-group 
+                    button.btn.btn-contact Submit

@@ -1,0 +1,37 @@
+extends base   
+
+block content 
+    main.main 
+        .container 
+            h2.title Update Information 
+            form#update-info   
+                .form-group 
+                    input.form-input#update-name(value=`${user.name}`  type='text' required)
+                .form-group 
+                    input.form-input#update-email(value=`${user.email}` type='email' required)
+                .form-group
+                    button.btn.btn-update-info Update Information
+            h2.title Change Password 
+            form#update-password
+                .form-group
+                    label.form-label(for='current-password') Current Password 
+                    .password
+                        input.form-input#current-password(type='password' required minlength='8')
+                        i#togglePasswordAccount.fa-regular.fa-eye-slash
+                .form-group 
+                    label.form-label(for='new-password') New Password 
+                    .password
+                        input.form-input#new-password(type='password' required minlength='8')
+                        i#togglePasswordAccountNew.fa-regular.fa-eye-slash
+                .form-group 
+                    label.form-label(for='password-confirm') Confirm Password 
+                    input.form-input#password-confirm(type='password' required minlength='8')
+                .form-group 
+                    button.btn.btn-update-password Update Password
+            h2.title Delete Account 
+            form#delete-account   
+                .form-group 
+                    label.form-label(for="checkbox") Please check the box below to confirm you want to delete your account.
+                    input.form-input#checkbox(type='checkbox')
+                .form-group 
+                    button.btn.btn-delete-account Delete Account
