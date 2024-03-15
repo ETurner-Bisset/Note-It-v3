@@ -17,7 +17,7 @@ module.exports = class Email {
       return nodemailer.createTransport({
         host: 'smtp.sendgrid.net',
         secure: true,
-        port: 25,
+        port: 465,
         auth: {
           user: process.env.SENDGRID_USERNAME,
           pass: process.env.SENDGRID_PASSWORD,
