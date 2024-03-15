@@ -204,6 +204,10 @@ exports.clearDoneList = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteList = catchAsync(async (req, res, next) => {
+  const itemIds = await Note.findById(req.params.noteId);
+  itemIds.itemsArr.forEach(async (item) => {
+    await Item.findByIdAndDelete(item);
+  });
   const note = await Note.findByIdAndUpdate(
     req.params.noteId,
     { itemsArr: [] },
