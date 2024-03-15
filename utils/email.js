@@ -25,6 +25,9 @@ module.exports = class Email {
         tls: {
           rejectUnauthorized: false,
         },
+        ssl: {
+          require: true,
+        },
       });
     } else {
       return nodemailer.createTransport({
