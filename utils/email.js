@@ -22,9 +22,9 @@ module.exports = class Email {
           user: process.env.SENDGRID_USERNAME,
           pass: process.env.SENDGRID_PASSWORD,
         },
-        tls: {
-          rejectUnauthorized: false,
-        },
+        // tls: {
+        //   rejectUnauthorized: false,
+        // },
       });
     } else {
       return nodemailer.createTransport({
