@@ -118,6 +118,7 @@ dropdown2.addEventListener('click', () => {
 if (loginForm) {
   loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    document.querySelector('.btn-login').textContent = 'Processing...';
     const email = document.getElementById('email-login').value;
     const password = document.getElementById('password-login').value;
     login(email, password);
@@ -401,17 +402,17 @@ if (deleteListBtn) {
   deleteListBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const noteId = e.target.id;
-    let itemIdArr = [];
-    const itemId =
-      e.target.parentNode.parentNode.childNodes[2].childNodes.forEach(
-        (item) => {
-          if (item.id !== undefined) {
-            itemIdArr.push(item.id);
-          }
-        },
-      );
+    // let itemIdArr = [];
+    // const itemId =
+    //   e.target.parentNode.parentNode.childNodes[2].childNodes.forEach(
+    //     (item) => {
+    //       if (item.id !== undefined) {
+    //         itemIdArr.push(item.id);
+    //       }
+    //     },
+    //   );
 
-    itemIdArr.forEach((item) => deleteItem(noteId, item));
+    // itemIdArr.forEach((item) => deleteItem(noteId, item));
     deleteList(noteId);
   });
 }

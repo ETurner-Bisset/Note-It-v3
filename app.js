@@ -66,12 +66,12 @@ if (process.env.NODE_ENV === 'development') {
 
 // Rate limiter
 // Limit requests from one IP
-// const limiter = rateLimit({
-//   max: 200,
-//   windowMs: 60 * 60 * 1000,
-//   message: 'Too many requests from this IP, please try again in an hour!',
-// });
-// app.use('/api', limiter);
+const limiter = rateLimit({
+  max: 200,
+  windowMs: 60 * 60 * 1000,
+  message: 'Too many requests from this IP, please try again in an hour!',
+});
+app.use('/api', limiter);
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
