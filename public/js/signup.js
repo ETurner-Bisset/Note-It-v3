@@ -18,7 +18,7 @@ export const signup = async (name, email, password, passwordConfirm) => {
       location.assign('/activateAccount');
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     showAlert('error', error.response.data.message);
   }
 };

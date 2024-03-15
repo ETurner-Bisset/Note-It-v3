@@ -162,7 +162,6 @@ if (resetPasswordForm) {
       'reset-passwordConfirm',
     ).value;
     const token = e.target.action.split('/')[4];
-
     resetUserPassword(password, passwordConfirm, token);
   });
 }
@@ -402,17 +401,6 @@ if (deleteListBtn) {
   deleteListBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const noteId = e.target.id;
-    // let itemIdArr = [];
-    // const itemId =
-    //   e.target.parentNode.parentNode.childNodes[2].childNodes.forEach(
-    //     (item) => {
-    //       if (item.id !== undefined) {
-    //         itemIdArr.push(item.id);
-    //       }
-    //     },
-    //   );
-
-    // itemIdArr.forEach((item) => deleteItem(noteId, item));
     deleteList(noteId);
   });
 }
